@@ -16,6 +16,7 @@
 		7E9CF8B7299E7F1700F6EB32 /* TallyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CF8B6299E7F1700F6EB32 /* TallyTests.swift */; };
 		7E9CF8C1299E7F1700F6EB32 /* TallyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CF8C0299E7F1700F6EB32 /* TallyUITests.swift */; };
 		7E9CF8C3299E7F1700F6EB32 /* TallyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CF8C2299E7F1700F6EB32 /* TallyUITestsLaunchTests.swift */; };
+		7E9CF8D0299E8F7800F6EB32 /* CookieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CF8CF299E8F7800F6EB32 /* CookieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7E9CF8BC299E7F1700F6EB32 /* TallyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TallyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9CF8C0299E7F1700F6EB32 /* TallyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TallyUITests.swift; sourceTree = "<group>"; };
 		7E9CF8C2299E7F1700F6EB32 /* TallyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TallyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7E9CF8CF299E8F7800F6EB32 /* CookieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				7E9CF8A1299E7F1500F6EB32 /* SceneDelegate.swift */,
 				7E9CF8A3299E7F1500F6EB32 /* ViewController.swift */,
 				7E9CF8A5299E7F1500F6EB32 /* Main.storyboard */,
+				7E9CF8CF299E8F7800F6EB32 /* CookieView.swift */,
 				7E9CF8A8299E7F1700F6EB32 /* Assets.xcassets */,
 				7E9CF8AA299E7F1700F6EB32 /* LaunchScreen.storyboard */,
 				7E9CF8AD299E7F1700F6EB32 /* Info.plist */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9CF8D0299E8F7800F6EB32 /* CookieView.swift in Sources */,
 				7E9CF8A4299E7F1500F6EB32 /* ViewController.swift in Sources */,
 				7E9CF8A0299E7F1500F6EB32 /* AppDelegate.swift in Sources */,
 				7E9CF8A2299E7F1500F6EB32 /* SceneDelegate.swift in Sources */,

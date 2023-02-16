@@ -1,24 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqj-C1-ggS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moL-9z-04G">
+                                        <rect key="frame" x="100" y="8" width="193" height="56"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaR-HF-at8">
+                                        <rect key="frame" x="135" y="206" width="122" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="edw-6H-jhj" userLabel="counterBox">
+                                        <rect key="frame" x="149" y="235" width="94" height="32"/>
+                                        <connections>
+                                            <action selector="changeCount:" destination="BYZ-38-t0r" eventType="valueChanged" id="qcn-fw-w3M"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8v-dE-nJh" userLabel="counterLabel">
+                                        <rect key="frame" x="160" y="275" width="73" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cookie" translatesAutoresizingMaskIntoConstraints="NO" id="T4J-Xv-4Gh">
+                                        <rect key="frame" x="-59.666666666666657" y="400" width="512" height="351"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your cookie!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lB-yx5">
+                                        <rect key="frame" x="100" y="102" width="193" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w80-yv-zhV" userLabel="nameCookieText">
+                                        <rect key="frame" x="118" y="131" width="157" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lTa-fb-okO"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78H-LX-anA" userLabel="goButton">
+                                        <rect key="frame" x="0.0" y="363" width="393" height="388"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <segue destination="dYr-kn-wr2" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ZUG-Nc-dRV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7Q-9C-LQY">
+                                        <rect key="frame" x="174" y="358" width="44" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="w80-yv-zhV" firstAttribute="leading" secondItem="Lqj-C1-ggS" secondAttribute="leading" constant="118" id="0Bn-lv-EJY"/>
+                                    <constraint firstAttribute="bottom" secondItem="IaR-HF-at8" secondAttribute="bottom" constant="532" id="1CG-fc-dSV"/>
+                                    <constraint firstAttribute="bottom" secondItem="w80-yv-zhV" secondAttribute="bottom" constant="594" id="2RC-4a-PWa"/>
+                                    <constraint firstAttribute="trailing" secondItem="78H-LX-anA" secondAttribute="trailing" id="9NW-SW-Jz7"/>
+                                    <constraint firstItem="moL-9z-04G" firstAttribute="leading" secondItem="Lqj-C1-ggS" secondAttribute="leading" constant="100" id="9kA-ec-VMb"/>
+                                    <constraint firstItem="IaR-HF-at8" firstAttribute="leading" secondItem="Lqj-C1-ggS" secondAttribute="leading" constant="135" id="AEl-kF-RoD"/>
+                                    <constraint firstItem="edw-6H-jhj" firstAttribute="top" secondItem="Lqj-C1-ggS" secondAttribute="top" constant="235" id="B9V-Wf-UAO"/>
+                                    <constraint firstAttribute="trailing" secondItem="w80-yv-zhV" secondAttribute="trailing" constant="118" id="BZo-mc-og8"/>
+                                    <constraint firstAttribute="trailing" secondItem="nBZ-lB-yx5" secondAttribute="trailing" constant="100" id="FWH-FJ-BoS"/>
+                                    <constraint firstItem="T4J-Xv-4Gh" firstAttribute="leading" secondItem="Lqj-C1-ggS" secondAttribute="leading" constant="-59.666666666666657" id="HEs-iW-UuR"/>
+                                    <constraint firstItem="t8v-dE-nJh" firstAttribute="top" secondItem="Lqj-C1-ggS" secondAttribute="top" constant="275" id="HTb-Sa-wWR"/>
+                                    <constraint firstItem="78H-LX-anA" firstAttribute="top" secondItem="Lqj-C1-ggS" secondAttribute="top" constant="363" id="Ia6-O2-5AM"/>
+                                    <constraint firstAttribute="trailing" secondItem="T4J-Xv-4Gh" secondAttribute="trailing" constant="-59.333333333333371" id="Ki6-v9-JHx"/>
+                                    <constraint firstItem="IaR-HF-at8" firstAttribute="top" secondItem="Lqj-C1-ggS" secondAttribute="top" constant="206" id="L3j-Cj-nmI"/>
+                                    <constraint firstAttribute="bottom" secondItem="T4J-Xv-4Gh" secondAttribute="bottom" constant="8" id="Mas-Xq-oTv"/>
+                                    <constraint firstAttribute="trailing" secondItem="IaR-HF-at8" secondAttribute="trailing" constant="136" id="RHa-e6-lKp"/>
+                                    <constraint firstItem="78H-LX-anA" firstAttribute="leading" secondItem="Lqj-C1-ggS" secondAttribute="leading" id="VEQ-GF-rAj"/>
+                                    <constraint firstItem="edw-6H-jhj" firstAttribute="leading" secondItem="Lqj-C1-ggS" secondAttribute="leading" constant="149" id="WUj-dK-tTH"/>
+                                    <constraint firstAttribute="bottom" secondItem="edw-6H-jhj" secondAttribute="bottom" constant="492" id="WdX-3G-peG"/>
+                                    <constraint firstAttribute="trailing" secondItem="edw-6H-jhj" secondAttribute="trailing" constant="150" id="Wkh-gM-e5A"/>
+                                    <constraint firstItem="nBZ-lB-yx5" firstAttribute="top" secondItem="Lqj-C1-ggS" secondAttribute="top" constant="102" id="XP2-Th-RQp"/>
+                                    <constraint firstItem="T4J-Xv-4Gh" firstAttribute="top" secondItem="Lqj-C1-ggS" secondAttribute="top" constant="400" id="Xh6-La-I8O"/>
+                                    <constraint firstAttribute="bottom" secondItem="nBZ-lB-yx5" secondAttribute="bottom" constant="636" id="YEZ-KX-Xsi"/>
+                                    <constraint firstItem="t8v-dE-nJh" firstAttribute="leading" secondItem="Lqj-C1-ggS" secondAttribute="leading" constant="160" id="cAA-b1-kZL"/>
+                                    <constraint firstItem="nBZ-lB-yx5" firstAttribute="leading" secondItem="Lqj-C1-ggS" secondAttribute="leading" constant="100" id="dm6-X9-eLf"/>
+                                    <constraint firstAttribute="bottom" secondItem="moL-9z-04G" secondAttribute="bottom" constant="695" id="dqg-IL-beK"/>
+                                    <constraint firstAttribute="trailing" secondItem="moL-9z-04G" secondAttribute="trailing" constant="100" id="dyZ-ar-mKd"/>
+                                    <constraint firstAttribute="bottom" secondItem="t8v-dE-nJh" secondAttribute="bottom" constant="463" id="mXE-aL-4pC"/>
+                                    <constraint firstItem="moL-9z-04G" firstAttribute="top" secondItem="Lqj-C1-ggS" secondAttribute="top" constant="8" id="pqG-DA-bdT"/>
+                                    <constraint firstAttribute="trailing" secondItem="t8v-dE-nJh" secondAttribute="trailing" constant="160" id="swD-Yp-4IT"/>
+                                    <constraint firstItem="w80-yv-zhV" firstAttribute="top" secondItem="Lqj-C1-ggS" secondAttribute="top" constant="131" id="u4N-4e-ofd"/>
+                                    <constraint firstAttribute="bottom" secondItem="78H-LX-anA" secondAttribute="bottom" constant="8" id="v3C-AJ-ar8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lqj-C1-ggS" secondAttribute="bottom" id="KNK-A3-fvU"/>
+                            <constraint firstItem="Lqj-C1-ggS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nc8-dP-bSN"/>
+                            <constraint firstItem="Lqj-C1-ggS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YgR-lX-IJS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lqj-C1-ggS" secondAttribute="trailing" id="mLX-3L-Z77"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="t8v-dE-nJh" id="1DC-I0-mUa"/>
+                        <outlet property="nameCookieText" destination="w80-yv-zhV" id="Ewe-qB-prg"/>
+                        <outlet property="textField" destination="w80-yv-zhV" id="reK-Qp-Uqe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+        <!--Cookie View-->
+        <scene sceneID="xTB-kf-RYw">
+            <objects>
+                <viewController id="IIs-9i-0eS" customClass="CookieView" customModule="Tally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="va7-rL-aOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cookie" translatesAutoresizingMaskIntoConstraints="NO" id="imN-k7-cMY" userLabel="cookieImage">
+                                <rect key="frame" x="50" y="300" width="293" height="296"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ7-RZ-aUe" userLabel="cookieName">
+                                <rect key="frame" x="133" y="200" width="126" height="118"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wu-gj-SEi">
+                                <rect key="frame" x="69" y="340" width="255" height="216"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="cookiePressed:" destination="IIs-9i-0eS" eventType="touchUpInside" id="I9e-2G-ryZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You pressed the cookie 0 times!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfa-zB-xOv" userLabel="cookiePressCount">
+                                <rect key="frame" x="101" y="604" width="191" height="111.33333333333337"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="azo-9u-4LZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="azo-9u-4LZ" firstAttribute="trailing" secondItem="6wu-gj-SEi" secondAttribute="trailing" constant="69" id="06g-Us-8Os"/>
+                            <constraint firstItem="6wu-gj-SEi" firstAttribute="top" secondItem="azo-9u-4LZ" secondAttribute="top" constant="237" id="4pZ-31-lPS"/>
+                            <constraint firstItem="azo-9u-4LZ" firstAttribute="trailing" secondItem="imN-k7-cMY" secondAttribute="trailing" constant="50" id="ChS-MV-P7s"/>
+                            <constraint firstItem="dQ7-RZ-aUe" firstAttribute="leading" secondItem="azo-9u-4LZ" secondAttribute="leading" constant="133" id="Cre-yn-meb"/>
+                            <constraint firstItem="imN-k7-cMY" firstAttribute="top" secondItem="azo-9u-4LZ" secondAttribute="top" constant="197" id="DyG-Dn-fXN"/>
+                            <constraint firstItem="azo-9u-4LZ" firstAttribute="bottom" secondItem="imN-k7-cMY" secondAttribute="bottom" constant="222" id="InK-Yp-yra"/>
+                            <constraint firstItem="6wu-gj-SEi" firstAttribute="leading" secondItem="azo-9u-4LZ" secondAttribute="leading" constant="69" id="LtW-lc-7CK"/>
+                            <constraint firstItem="azo-9u-4LZ" firstAttribute="trailing" secondItem="dQ7-RZ-aUe" secondAttribute="trailing" constant="134" id="XsY-Xh-RqD"/>
+                            <constraint firstItem="imN-k7-cMY" firstAttribute="leading" secondItem="azo-9u-4LZ" secondAttribute="leading" constant="50" id="bdi-49-Ijp"/>
+                            <constraint firstItem="Rfa-zB-xOv" firstAttribute="top" secondItem="6wu-gj-SEi" secondAttribute="bottom" constant="48" id="eB2-d2-R6D"/>
+                            <constraint firstItem="azo-9u-4LZ" firstAttribute="trailing" secondItem="Rfa-zB-xOv" secondAttribute="trailing" constant="101" id="nS2-RG-Rlu"/>
+                            <constraint firstItem="azo-9u-4LZ" firstAttribute="bottom" secondItem="6wu-gj-SEi" secondAttribute="bottom" constant="262" id="qaF-cE-kWl"/>
+                            <constraint firstItem="Rfa-zB-xOv" firstAttribute="leading" secondItem="azo-9u-4LZ" secondAttribute="leading" constant="101" id="reM-Ge-XEC"/>
+                            <constraint firstItem="dQ7-RZ-aUe" firstAttribute="top" secondItem="azo-9u-4LZ" secondAttribute="top" constant="97" id="uHG-Za-aKm"/>
+                            <constraint firstItem="azo-9u-4LZ" firstAttribute="bottom" secondItem="dQ7-RZ-aUe" secondAttribute="bottom" constant="500" id="wtC-Rh-RM0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fIf-vz-69M"/>
+                    <connections>
+                        <outlet property="cookieImage" destination="imN-k7-cMY" id="8fE-7Z-GwI"/>
+                        <outlet property="cookieName" destination="dQ7-RZ-aUe" id="lFh-Zv-hMa"/>
+                        <outlet property="cookiePressCount" destination="Rfa-zB-xOv" id="1QS-8v-peF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUb-70-cRF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.3435114503816" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gub-Ko-fcJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dYr-kn-wr2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SaT-LO-DhJ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IIs-9i-0eS" kind="relationship" relationship="rootViewController" id="0K7-iK-Et4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvf-OA-ZEB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878.62595419847321" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cookie" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
